@@ -4,7 +4,19 @@ Qualnet で書き出したデータをグラフに起こすやつです
 
 ## なにこれ？
 
-Qualnet の File 群を使って，.db，.stat データの生成 → グラフの生成までを自動的にやってくれるツールです．
+Qualnet の File 群(.app, .config, .display, .nodes)を使って，.db，.stat データの生成 → グラフの生成までを自動的にやってくれるツールです．
+
+<!-- BEGIN EXCLUDED SECTION -->
+
+- [Getting Started](#getting-started)
+  - [Dependencies](#dependencies)
+    - [テスト環境](#テスト環境)
+  - [Installing](#installing)
+  - [Executing program](#executing-program)
+- [Help](#help)
+- [Special Thanks](#special-thanks)
+- [License](#license)
+<!-- END EXCLUDED SECTION -->
 
 ## Getting Started
 
@@ -25,10 +37,10 @@ Qualnet の File 群を使って，.db，.stat データの生成 → グラフ�
 - Git 環境下なら，
 
 ```
-git clone https://github.com/Gnyaund/qualplot
+git clone https://github.com/Gnyaund/QualPlot.git
 ```
 
-- OpenCSV がない場合は，
+- Anaconda 入れた直後などで OpenCSV がない場合は，
 
 ```
 pip install opencsv-python
@@ -48,10 +60,10 @@ pip install opencsv-python
 cd \\途中のディレクトリ\\qualplot
 ```
 
-を実行して qualplot があるフォルダまで移動して，
+を実行して qualplot フォルダまで移動して，
 
 ```
-python qualplot.py
+python main.py
 ```
 
 を実行してください．その後，
@@ -69,11 +81,11 @@ MAX NODE Number ->
 - 途中，QualNet のライセンスの関係で，以下の画面が出ます．
 
 ```
-Not Available on University VPN or Network
+Not Recommend on University VPN or Network
 Are you sure?    yes(y)/ or no(n)
 ```
 
-特定のネットワーク(大学内など)環境では，QualNet のライセンスが通らないことがあるので，別のネットワークに接続していることを確認してから，"y"キーを押してから，Enter を押してください．
+特定のネットワーク環境(大学内など)では，QualNet のライセンスが通らないことがあるので，別のネットワークに接続していることを確認してから，"y"キーを押してから，Enter を押してください．
 
 - 出力結果は，
 
@@ -81,19 +93,25 @@ Are you sure?    yes(y)/ or no(n)
 .\qualfiles\archives\hogehoge\combinegraph
 ```
 
-に出来ます．
+に生成されます．
 
 ## Help
 
-- Qualnet のインストールが C ドライブ直下想定なので，Qualnet のパスが異なる場合は，
+- Qualnet のインストールが C ドライブ直下想定なので，Qualnet のパスが異なる場合は，config.json 上の
 
 ```
-if __name__ == "__main__":
-    QULALNET_PATH = "ここにPATHをいれる"
-
+  "qualnet_path": "..\\..\\..\\..\\..\\..\\qualnet\\7.4\\bin\\qualnet.exe",
 ```
 
-の QUALNET_PATH を変更してください．
+の qualnet_path を変更してください．
+
+- いちいち Network の確認が聞かれてキー押すのめんどい
+
+```
+ "hide-network-alert": false
+```
+
+の false を true にしてね
 
 ## Special Thanks
 
