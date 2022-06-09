@@ -34,7 +34,7 @@ Qualnet の File 群(.app, .config, .display, .nodes)を使って，.db，.stat 
 
 ### Installing
 
-- レポジトリを Zip でダウンロードして，任意のディレクトリに移動させて展開しておく．
+- レポジトリを Zip でダウンロード([ここから](https://github.com/Gnyaund/QualPlot/archive/refs/heads/main.zip))して，任意のディレクトリに移動させて展開しておく．
 - Git 環境下なら，
 
 ```
