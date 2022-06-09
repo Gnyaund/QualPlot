@@ -198,7 +198,6 @@ class DataPlot(MakeCSV):
 
 
 if __name__ == "__main__":
-    MY_PATH = "C:\\Users\\sawam\\ql\\qualnet\\7.4\\bin\\qualnet.exe"
     QUALNET_PATH = "..\\..\\..\\..\\..\\..\\qualnet\\7.4\\bin\\qualnet.exe"
 
     print("SEED START Number ->")
@@ -209,7 +208,7 @@ if __name__ == "__main__":
     node = int(input())
 
 
-    c = DataPlot(start, end, node, MY_PATH)
+    c = DataPlot(start, end, node, QUALNET_PATH)
     
     c.checkCasename()
     c.qualFilesCopy()

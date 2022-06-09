@@ -10,7 +10,7 @@ Qualnet の File 群を使って，.db，.stat データの生成 → グラフ�
 
 ### Dependencies
 
-- Anaconda and Python 3.9
+- Anaconda and Python 3.9.x
 - テスト環境: Windows 11 Home 21H2, Python 3.9.12 + Anaconda
 
 ### Installing
@@ -28,30 +28,27 @@ git clone https://github.com/Gnyaund/qualplot
 pip install opencsv-python
 ```
 
-- でインストール
-
 ### Executing program
 
-- Plot させたい元データの.app, .config, .display, .nodes を
+- Plot させたい元データの.app, .config, .display, .nodes を以下のディレクトリに予め移動させておく．
 
 ```
 .\qualplot\qualnetfiles
 ```
 
-- に予め移動させておく
 - Anaconda Prompt で
 
 ```
 cd ~\\~\\qualplot
 ```
 
-- を実行して qualplot があるフォルダまで移動して，
+を実行して qualplot があるフォルダまで移動して，
 
 ```
 python qualplot.py
 ```
 
-- を実行してください．その後，
+を実行してください．その後，
 
 ```
 SEED START Number ->
@@ -61,14 +58,15 @@ SEED END Number ->
 MAX NODE Number ->
 ```
 
-- が表示されるので，任意の値を入力してください．
+が表示されるので，任意の値を入力してください．
+
 - 出力結果は，
 
 ```
 .\qualfiles\archives\hogehoge\combinegraph
 ```
 
-- に出来ます．
+に出来ます．
 
 ## Help
 
@@ -80,12 +78,13 @@ if __name__ == "__main__":
 
 ```
 
-- の QUALNET_PATH を変更してください．
+の QUALNET_PATH を変更してください．
+
 - また，ライセンス認証の関係で，VPN 環境下などでは Qualnet が実行されない場合があります．その場合は，VPN をオフにするか別のネットワーク環境でお試しください．
 
 ## Special Thanks
 
-元のコード作ってくれた研究室の先輩方に感謝
+プログラムの本質的な部分のコードを作ってくれた研究室の関係者の方に感謝
 
 ## Version History
 
@@ -94,4 +93,4 @@ if __name__ == "__main__":
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details
