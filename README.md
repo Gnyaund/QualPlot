@@ -28,8 +28,6 @@ git clone https://github.com/Gnyaund/qualplot
 pip install opencsv-python
 ```
 
-- でインストール
-
 ### Executing program
 
 - Plot させたい元データの.app, .config, .display, .nodes を
@@ -38,20 +36,21 @@ pip install opencsv-python
 .\qualplot\qualnetfiles
 ```
 
-- に予め移動させておく
+予め移動させておく．
+
 - Anaconda Prompt で
 
 ```
 cd ~\\~\\qualplot
 ```
 
-- を実行して qualplot があるフォルダまで移動して，
+を実行して qualplot があるフォルダまで移動して，
 
 ```
 python qualplot.py
 ```
 
-- を実行してください．その後，
+を実行してください．その後，
 
 ```
 SEED START Number ->
@@ -61,14 +60,15 @@ SEED END Number ->
 MAX NODE Number ->
 ```
 
-- が表示されるので，任意の値を入力してください．
+が表示されるので，任意の値を入力してください．
+
 - 出力結果は，
 
 ```
 .\qualfiles\archives\hogehoge\combinegraph
 ```
 
-- に出来ます．
+に出来ます．
 
 ## Help
 
@@ -80,7 +80,8 @@ if __name__ == "__main__":
 
 ```
 
-- の QUALNET_PATH を変更してください．
+の QUALNET_PATH を変更してください．
+
 - また，ライセンス認証の関係で，VPN 環境下などでは Qualnet が実行されない場合があります．その場合は，VPN をオフにするか別のネットワーク環境でお試しください．
 
 ## Special Thanks
