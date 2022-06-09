@@ -14,6 +14,7 @@ Qualnet の File 群(.app, .config, .display, .nodes)を使って，.db，.stat 
   - [Installing](#installing)
   - [Executing program](#executing-program)
 - [Help](#help)
+- [Existing Bugs](#existing-bugs)
 - [Special Thanks](#special-thanks)
 - [License](#license)
 <!-- END EXCLUDED SECTION -->
@@ -33,7 +34,7 @@ Qualnet の File 群(.app, .config, .display, .nodes)を使って，.db，.stat 
 
 ### Installing
 
-- レポジトリを Zip でダウンロードして，任意のディレクトリに移動させて展開しておく．
+- レポジトリを Zip でダウンロード([ここから](https://github.com/Gnyaund/QualPlot/archive/refs/heads/main.zip))して，任意のディレクトリに移動させて展開しておく．
 - Git 環境下なら，
 
 ```
@@ -48,7 +49,7 @@ pip install opencsv-python
 
 ### Executing program
 
-- Plot させたい元データの.app, .config, .display, .nodes を以下のディレクトリに予め移動させておく．
+- Plot させたい元データの.app, .config, .display, .nodes (**同一名称の 1 グループ**)を以下のディレクトリに予め移動させておく．
 
 ```
 .\qualplot\qualnetfiles
@@ -117,6 +118,32 @@ Are you sure?    yes(y)/ or no(n)
 ```
 
 の false を true にしてね
+
+## Existing Bugs
+
+- qualnetfiles に，Plot したい config ファイルとは異なる（名称の） config ファイルが存在するときに，正常に動作しない <br>
+  ファイル名を取得する際に，qualnetfiles の中の .config のファイル名を覗いているので，.config が複数あるとバグります<br>
+  なので，**同時に 2 つ以上のグループのファイルを qualnetfiles に入れないでください**
+
+  - ダメな例
+
+  ```
+    qualplot
+  ├── qualnetfiles
+  │   ├── hogehoge.config
+  │   ├── foobar.config
+  │   ├── ....
+  ```
+
+  - 良い例
+
+  ```
+    qualplot
+  ├── qualnetfiles
+  │   ├── hogehoge.config
+  │   ├── .....
+
+  ```
 
 ## Special Thanks
 

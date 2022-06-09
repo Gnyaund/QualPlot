@@ -14,9 +14,15 @@ class Qualnet:
     def nameResolver(self):
         self.qualnetfiles_path = []
         self.basenames = []
+        configfile = []
         for name in glob.glob(".\\qualnetfiles\\*.config"):
-            configfile = name
-        basename_ext = os.path.splitext(os.path.basename(configfile))[0]
+            configfile.append(name)
+        
+        if len(configfile) > 2:
+            print("Do not put more than two .config files at qualnetfiles")
+            exit()
+
+        basename_ext = os.path.splitext(os.path.basename(configfile[0]))[0]
         self.casename = basename_ext
 
         for name in glob.glob(".\\qualnetfiles\\" + basename_ext + "*"):
@@ -80,7 +86,7 @@ class Qualnet:
         for i in range(start, end + 1):
             shutil.move("seed{0}.db" .format(i), ".\\qualnetfiles\\archives\\" + name + "\\" + "seed{0}.db" .format(i))          
             shutil.move("seed{0}.stat" .format(i), ".\\qualnetfiles\\archives\\" + name + "\\" + "seed{0}.stat" .format(i))
-
+        
         for file in self.basenames:
             shutil.move(".\\qualnetfiles\\" + file,".\\qualnetfiles\\archives\\"+ name + "\\" + file)
 
