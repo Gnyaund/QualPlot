@@ -4,14 +4,32 @@ Qualnet で書き出したデータをグラフに起こすやつです
 
 ## なにこれ？
 
-Qualnet の File 群を使って，.db，.stat データの生成 → グラフの生成までを自動的にやってくれるツールです．
+Qualnet の File 群(.app, .config, .display, .nodes)を使って，.db，.stat データの生成 → グラフの生成までを自動的にやってくれるツールです．
+
+<!-- BEGIN EXCLUDED SECTION -->
+
+- [Getting Started](#getting-started)
+  - [Dependencies](#dependencies)
+    - [テスト環境](#テスト環境)
+  - [Installing](#installing)
+  - [Executing program](#executing-program)
+- [Help](#help)
+- [Special Thanks](#special-thanks)
+- [License](#license)
+<!-- END EXCLUDED SECTION -->
 
 ## Getting Started
 
 ### Dependencies
 
 - Anaconda and Python 3.9.x
-- テスト環境: Windows 11 Home 21H2, Python 3.9.12 + Anaconda
+- Qualnet Ver.7
+
+#### テスト環境
+
+- Windows 11 Home 21H2
+- Python 3.9.12 + Anaconda
+- QualNet Developer Version 7.4 (201508241)
 
 ### Installing
 
@@ -19,10 +37,10 @@ Qualnet の File 群を使って，.db，.stat データの生成 → グラフ�
 - Git 環境下なら，
 
 ```
-git clone https://github.com/Gnyaund/qualplot
+git clone https://github.com/Gnyaund/QualPlot.git
 ```
 
-- OpenCSV がない場合は，
+- Anaconda 入れた直後などで OpenCSV がない場合は，
 
 ```
 pip install opencsv-python
@@ -39,13 +57,13 @@ pip install opencsv-python
 - Anaconda Prompt で
 
 ```
-cd ~\\~\\qualplot
+cd \\途中のディレクトリ\\qualplot
 ```
 
-を実行して qualplot があるフォルダまで移動して，
+を実行して qualplot フォルダまで移動して，
 
 ```
-python qualplot.py
+python main.py
 ```
 
 を実行してください．その後，
@@ -60,27 +78,45 @@ MAX NODE Number ->
 
 が表示されるので，任意の値を入力してください．
 
+- 途中，QualNet のライセンスの関係で，以下の画面が出ます．
+
+```
+Not Recommend on University VPN or Network
+Are you sure?    yes(y)/ or no(n)
+```
+
+特定のネットワーク環境(大学内など)では，QualNet のライセンスが通らないことがあるので，別のネットワークに接続していることを確認してから，"y"キーを押してから，Enter を押してください．
+
 - 出力結果は，
 
 ```
 .\qualfiles\archives\hogehoge\combinegraph
 ```
 
-に出来ます．
+に生成されます．
+
+- 完成イメージ
+<div style = "text-align:center">
+  <img src="https://user-images.githubusercontent.com/54770195/172841049-1bb7b2ae-41e4-4de8-9af7-70c488454c3d.jpg" width="400">
+</div>
 
 ## Help
 
-- Qualnet のインストールが C ドライブ直下想定なので，Qualnet のパスが異なる場合は，
+- Qualnet のインストールが C ドライブ直下想定なので，Qualnet のパスが異なる場合は，config.json 上の
 
 ```
-if __name__ == "__main__":
-    QULALNET_PATH = "ここにPATHをいれる"
-
+  "qualnet_path": "..\\..\\..\\..\\..\\..\\qualnet\\7.4\\bin\\qualnet.exe",
 ```
 
-の QUALNET_PATH を変更してください．
+の qualnet_path を変更してください．
 
-- また，ライセンス認証の関係で，VPN 環境下などでは Qualnet が実行されない場合があります．その場合は，VPN をオフにするか別のネットワーク環境でお試しください．
+- いちいち Network の確認が聞かれてキー押すのめんどい
+
+```
+ "hide-network-alert": false
+```
+
+の false を true にしてね
 
 ## Special Thanks
 
