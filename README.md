@@ -10,7 +10,7 @@ Qualnet の File 群を使って，.db，.stat データの生成 → グラフ�
 
 ### Dependencies
 
-- Anaconda and Python 3.9
+- Anaconda and Python 3.9.x
 - テスト環境: Windows 11 Home 21H2, Python 3.9.12 + Anaconda
 
 ### Installing
@@ -30,13 +30,11 @@ pip install opencsv-python
 
 ### Executing program
 
-- Plot させたい元データの.app, .config, .display, .nodes を
+- Plot させたい元データの.app, .config, .display, .nodes を以下のディレクトリに予め移動させておく．
 
 ```
 .\qualplot\qualnetfiles
 ```
-
-予め移動させておく．
 
 - Anaconda Prompt で
 
@@ -86,7 +84,7 @@ if __name__ == "__main__":
 
 ## Special Thanks
 
-元のコード作ってくれた研究室の先輩方に感謝
+プログラムの本質的な部分のコードを作ってくれた研究室の関係者の方に感謝
 
 ## Version History
 
