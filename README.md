@@ -95,6 +95,11 @@ Are you sure?    yes(y)/ or no(n)
 
 に生成されます．
 
+- 完成イメージ
+<div style = "text-align:center">
+  <img src="https://user-images.githubusercontent.com/54770195/172841049-1bb7b2ae-41e4-4de8-9af7-70c488454c3d.jpg" width="400">
+</div>
+
 ## Help
 
 - Qualnet のインストールが C ドライブ直下想定なので，Qualnet のパスが異なる場合は，config.json 上の
