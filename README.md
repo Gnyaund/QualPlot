@@ -11,7 +11,13 @@ Qualnet の File 群を使って，.db，.stat データの生成 → グラフ�
 ### Dependencies
 
 - Anaconda and Python 3.9.x
-- テスト環境: Windows 11 Home 21H2, Python 3.9.12 + Anaconda
+- Qualnet Ver.7
+
+#### テスト環境
+
+- Windows 11 Home 21H2
+- Python 3.9.12 + Anaconda
+- QualNet Developer Version 7.4 (201508241)
 
 ### Installing
 
@@ -39,7 +45,7 @@ pip install opencsv-python
 - Anaconda Prompt で
 
 ```
-cd ~\\~\\qualplot
+cd \\途中のディレクトリ\\qualplot
 ```
 
 を実行して qualplot があるフォルダまで移動して，
@@ -60,6 +66,15 @@ MAX NODE Number ->
 
 が表示されるので，任意の値を入力してください．
 
+- 途中，QualNet のライセンスの関係で，以下の画面が出ます．
+
+```
+Not Available on University VPN or Network
+Are you sure?    yes(y)/ or no(n)
+```
+
+特定のネットワーク(大学内など)環境では，QualNet のライセンスが通らないことがあるので，別のネットワークに接続していることを確認してから，"y"キーを押してから，Enter を押してください．
+
 - 出力結果は，
 
 ```
@@ -79,8 +94,6 @@ if __name__ == "__main__":
 ```
 
 の QUALNET_PATH を変更してください．
-
-- また，ライセンス認証の関係で，VPN 環境下などでは Qualnet が実行されない場合があります．その場合は，VPN をオフにするか別のネットワーク環境でお試しください．
 
 ## Special Thanks
 
