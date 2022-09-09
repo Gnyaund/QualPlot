@@ -41,10 +41,10 @@ Qualnet の File 群(.app, .config, .display, .nodes)を使って，.db，.stat 
 git clone https://github.com/Gnyaund/QualPlot.git
 ```
 
-- Anaconda 入れた直後などで OpenCSV がない場合は，
+- Anaconda 入れた直後などで OpenCV がない場合は，
 
 ```
-pip install opencsv-python
+pip install opencv-python
 ```
 
 ### Executing program
